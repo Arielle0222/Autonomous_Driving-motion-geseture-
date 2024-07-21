@@ -1,6 +1,6 @@
-import cv2
-import mediapipe as mp
-import numpy as np
+import cv2 # type: ignore
+import mediapipe as mp # type: ignore
+import numpy as np 
 import time, os
 
 actions = ['come', 'away', 'spin']
@@ -15,7 +15,7 @@ hands = mp_hands.Hands(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 created_time = int(time.time())
 os.makedirs('dataset', exist_ok=True)
